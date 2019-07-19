@@ -14,7 +14,7 @@ import { ConfigService } from '../config/config.service';
 })
 export class AuthService {
   public appConfig: any;
-  public apiBaseUrl = 'http://rinkesh.cf:3002';
+  public apiBaseUrl = 'http://localhost:3002';
 
   constructor(
     private http: HttpClient,

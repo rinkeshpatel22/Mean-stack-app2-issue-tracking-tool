@@ -1,6 +1,6 @@
 export enum UrlConstants {
     CONFIG_LOCATION = 'assets/appConfig.json',
-    API_URL = 'http://rinkesh.cf:3002',
+    API_URL = 'http://localhost:3002',
     dashboard = 'dashboard',
     description = 'description/',
     LOGIN = '/api/v1/users/login',

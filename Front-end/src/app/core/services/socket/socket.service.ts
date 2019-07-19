@@ -14,7 +14,7 @@ export class SocketService {
   private componentMethodCallSource = new Subject<any>();
   public componentMethodCalled$ = this.componentMethodCallSource.asObservable();
   public socket;
-  public url = 'http://rinkesh.cf:3002';
+  public url = 'http://localhost:3002';
 
   constructor(public http: HttpClient) {
     this.socket = io(this.url);

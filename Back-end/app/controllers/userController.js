@@ -227,7 +227,7 @@ let forgotPassword = (req, res) => {
                 } else {
                     emailLib.sendEmail(result.email, "Password reset",
                         `Dear user,<br/><br/> 
-                        <a href='http://rinkesh.s3-website.ap-south-1.amazonaws.com/resetPassword/${result.userId}'>
+                        <a href='http://localhost:4200/resetPassword/${result.userId}'>
                         Click here to reset password</a><br/><br/><br>
                         Cheers,<br/>Issue Tracking Tool.`);
                     let response = responseLib.generate(false, 'Email sent successfully to reset the password', 200, 'email sent');
