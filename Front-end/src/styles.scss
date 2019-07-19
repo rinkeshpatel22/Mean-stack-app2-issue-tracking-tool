@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.app-container{
+    width: 90%;
+    margin: 40px auto;
+  }
+  
+.at-ellipsis{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body{
+    overflow-x: hidden;
+}
+
+button{
+    outline: none !important;
+}
+
+.mat-cell, .mat-header-cell{
+    padding: 0 10px;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+    z-index: 99999 !important;
+ }
+
+ .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+    display: none !important;
+ }
+ .ngx-editor-textarea{
+     min-height: 100px !important;
+ }
+
+
+// Filter styling
+.at-filter{
+    .mat-form-field-appearance-legacy .mat-form-field-underline{
+       display: none;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+        padding-bottom: 0 !important
+    }
+    .mat-form-field-infix{
+        bottom: 5px;
+        font-weight: 600;
+        color: #007bff !important;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+    mat-label, span{
+        color: #007bff; 
+        letter-spacing: 0.5px;
+    }
+    .mat-elevation-z8{
+        border-radius: .25rem;
+    }
+  }
+
+ .mat-primary .mat-option.mat-selected:not(.mat-option-disabled),
+ .mat-select-arrow, mat-label{
+   color: #007bff !important; 
+ }
+ 
+ .mat-form-field.mat-focused .mat-form-field-ripple{
+   background-color: #007bff !important;
+ }
+
+ .at-remove-attachment{
+    color: red;
+    opacity: 0.7;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.shadow-box-card{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 20px;
+}
+.mat-table{
+    max-height: unset !important;
+}
