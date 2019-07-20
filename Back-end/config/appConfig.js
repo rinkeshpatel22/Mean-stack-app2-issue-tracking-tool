@@ -7,8 +7,8 @@ appConfig.db = {
   uri: 'mongodb://127.0.0.1:27017/issueTrackerDB1'
 }
 appConfig.apiVersion = '/api/v1';
-appConfig.emailId = '';
-appConfig.password = '';
+appConfig.emailId = 'dummy.ac.rinkesh@gmail.com';
+appConfig.password = 'dummy22#rinkesh22';
 
 module.exports = {
   port: appConfig.port,

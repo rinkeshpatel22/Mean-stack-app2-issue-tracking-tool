@@ -34,7 +34,7 @@ let signUp = (req, res) => {
                         } else {
                             let response = responseLib.generate(false, 'User created', 200, null);
                             res.send(response);
-                            emailLib.sendEmail(newUser.email, null, 'Welcome',
+                            emailLib.sendEmail(newUser.email, 'Welcome',
                                 `Dear user,<br/><br/> 
                             Welcome to Issue Tracking Tool application.<br/><br/><br/>
                             Cheers,<br/>Issue Tracking Tool.`);
@@ -227,7 +227,7 @@ let forgotPassword = (req, res) => {
                 } else {
                     emailLib.sendEmail(result.email, "Password reset",
                         `Dear user,<br/><br/> 
-                        <a href='http://localhost:4200/resetPassword/${result.userId}'>
+                        <a href='http://rinkesh.s3-website.ap-south-1.amazonaws.com/resetPassword/${result.userId}'>
                         Click here to reset password</a><br/><br/><br>
                         Cheers,<br/>Issue Tracking Tool.`);
                     let response = responseLib.generate(false, 'Email sent successfully to reset the password', 200, 'email sent');
@@ -289,7 +289,7 @@ let resetPassword = (req, res) => {
                                 let response = responseLib.generate(true, 'User not found', 404, null);
                                 reject(response);
                             } else {
-                                emailLib.sendEmail(userDetails.email, null, "Password reset",
+                                emailLib.sendEmail(userDetails.email, "Password reset",
                                     `Dear user,<br/><br/> 
                                 Your login password for Issue Tracking Tool has been changed.<br/<br/>br/>
                                 Cheers,<br/>Issue Tracking Tool.`);
