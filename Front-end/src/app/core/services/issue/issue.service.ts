@@ -10,8 +10,7 @@ import { UrlConstants } from '../../constants/url.constants';
   providedIn: 'root'
 })
 export class IssueService {
-  public apiBaseUrl = 'http://localhost:3002';
-
+  
   constructor(
     public httpClient: HttpClient,
     public configService: ConfigService
