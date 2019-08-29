@@ -1,5 +1,5 @@
 const notificationController = require("../controllers/notificationController");
-const appConfig = require("../../config/appConfig");
+const appConfig = require("../../config/appConfiguration");
 const auth = require('../middlewares/auth');
 const validation = require('../middlewares/validation');
 

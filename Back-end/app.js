@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const app = express();
 const mongoose = require('mongoose');
-const appConfig = require('./config/appConfig');
+const appConfig = require('./config/appConfiguration');
 const socketLib = require('./app/libs/socketLib');
 mongoose.set('useCreateIndex', true);
 

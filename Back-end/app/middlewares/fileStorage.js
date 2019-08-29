@@ -1,4 +1,4 @@
-const appConfig = require("../../config/appConfig");
+const appConfig = require("../../config/appConfiguration");
 const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
 const path = require('path');

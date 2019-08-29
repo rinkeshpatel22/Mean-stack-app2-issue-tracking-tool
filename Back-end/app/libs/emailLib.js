@@ -2,7 +2,7 @@
 const nodemailer = require('nodemailer');
 const loggerLib = require('../libs/loggerLib');
 const responseLib = require('../libs/responseLib');
-const appConfig = require("../../config/appConfig");
+const appConfig = require("../../config/appConfiguration");
 
 let sendEmail = (toEmail, emailTitle, emailMessage) => {
     return new Promise((resolve) => {

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Grid = require('gridfs-stream');
 const fileController = require("../controllers/fileController");
-const appConfig = require("../../config/appConfig");
+const appConfig = require("../../config/appConfiguration");
 const fileStorage = require('../middlewares/fileStorage');
 
 const connection = mongoose.createConnection(appConfig.db.uri);
