@@ -10,14 +10,12 @@ import { UrlConstants } from '../../constants/url.constants';
   providedIn: 'root'
 })
 export class IssueService {
-  
+  private apiBaseUrl: string;
   constructor(
     public httpClient: HttpClient,
     public configService: ConfigService
   ) {
-    this.configService.getConfig().subscribe((response) => {
-      this.apiBaseUrl = response.API_BASE_URL;
-    });
+    this.apiBaseUrl = localStorage.getItem('API_BASE_URL');
   }
 
   // get issues api call

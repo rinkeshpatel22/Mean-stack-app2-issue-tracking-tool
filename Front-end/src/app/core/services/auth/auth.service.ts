@@ -14,14 +14,13 @@ import { ConfigService } from '../config/config.service';
 })
 export class AuthService {
   public appConfig: any;
+  private apiBaseUrl: string;
 
   constructor(
     private http: HttpClient,
     private configService: ConfigService
   ) {
-    this.configService.getConfig().subscribe((response) => {
-      this.apiBaseUrl = response.API_BASE_URL;
-    });
+    this.apiBaseUrl = localStorage.getItem('API_BASE_URL');
   }
 
   // signup api call

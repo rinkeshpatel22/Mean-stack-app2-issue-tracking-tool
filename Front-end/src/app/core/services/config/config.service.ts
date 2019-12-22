@@ -11,7 +11,9 @@ export class ConfigService {
   constructor(private httpClient: HttpClient) { }
 
   public getConfig(): any {
-    return this.httpClient.get(UrlConstants.CONFIG_LOCATION);
+    return this.httpClient.get(UrlConstants.CONFIG_LOCATION).subscribe(res => {
+      localStorage.setItem('API_BASE_URL', res['API_BASE_URL']);
+    });
   }
 }
 

@@ -14,9 +14,10 @@ export class SocketService {
   private componentMethodCallSource = new Subject<any>();
   public componentMethodCalled$ = this.componentMethodCallSource.asObservable();
   public socket;
-  public url = 'http://localhost:3002';
+  public url;
 
   constructor(public http: HttpClient) {
+    this.url = localStorage.getItem('API_BASE_URL');
     this.socket = io(this.url);
     this.userId = Cookie.get(CookieConstants.activeUserId);
     this.socket.on(this.userId, (data) => {

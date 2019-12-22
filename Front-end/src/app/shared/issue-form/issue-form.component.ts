@@ -108,8 +108,9 @@ export class IssueFormComponent implements OnInit {
           this.fileUploadProgress = `${(event.loaded / event.total * 100)}%`;
         }
         if (event.type === HttpEventType.Response) {
+          const ApiBaseUrl = localStorage.getItem('API_BASE_URL');
           this.attachedFiles.push({
-            link: UrlConstants.API_URL + UrlConstants.FILE_READ + event.body[IssueFormConstants.filename],
+            link: ApiBaseUrl + UrlConstants.FILE_READ + event.body[IssueFormConstants.filename],
             name: event.body[IssueFormConstants.originalFileName],
             dbFileName: event.body[IssueFormConstants.filename]
           });
